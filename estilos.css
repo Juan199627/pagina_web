@@ -1,0 +1,485 @@
+/* ===== RESET GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== HEADER Y NAVEGACIÓN ===== */
+header {
+    background: linear-gradient(135deg, #34538A 0%, #34538A 100%);
+    color: white;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.logo-container:hover {
+    transform: translateY(-2px);
+}
+
+.logo-img-header {
+    max-height: 55px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(223, 215, 215);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+    opacity: 0.9;
+}
+
+/* ===== HERO (Banner Principal con Imagen de Fondo) ===== */
+.hero {
+    background: linear-gradient(rgba(22, 65, 145, 0.7), rgba(13, 42, 97, 0.7)), 
+                url('img/cobranzas.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ===== SECCIÓN CONÓCENOS: FRANJA COMPLETA ===== */
+.seccion-franja {
+    width: 100%;
+    background: linear-gradient(135deg, #164191 0%, #0d2a61 100%); 
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-texto {
+    max-width: 1200px;
+    width: 90%; 
+    margin: 0 auto;
+    text-align: left; 
+    color: white; 
+}
+
+.contenedor-texto h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.contenedor-texto h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #f7f2f2; 
+}
+
+.contenedor-texto p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify; 
+    max-width: 1100px;
+}
+
+/* ===== BOTÓN CTA ===== */
+.cta-button {
+    background: rgb(247, 242, 242);
+    color: #111216;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+    width: 100%;
+    padding: 4rem 2rem;
+    scroll-margin-top: 10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0b0e14;
+    text-align: center;
+}
+
+/* ===== SERVICIOS (Cuadros) ===== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 2rem;
+    margin-top: 3rem;
+    justify-content: center;
+}
+
+.servicio-card {
+    background: rgb(160, 160, 172);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-card h3 {
+    color: #16171d;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ===== VENTAJAS ===== */
+.ventajas {
+    background: #1c59db;
+}
+
+/* Busca esta sección y déjala exactamente así: */
+.ventajas-list {
+    display: grid;
+    /* Cambiamos el mínimo de 250px a 450px para que los cuadros sean más anchos */
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); 
+    
+    /* Aumentamos el espacio entre los cuadros */
+    gap: 2rem; 
+    
+    max-width: 1200px; /* Mantiene la alineación con el resto de la página */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Ajuste adicional para que el contenido interno tenga mejor respiro */
+.ventaja-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7); /* Fondo sutil para legibilidad */
+    padding: 1.5rem; 
+    border-radius: 12px;
+}
+
+.ventaja-icon {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    background-color: #667eea;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* ===== CONTACTO (DOS COLUMNAS ACTUALIZADO) ===== */
+.contacto {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+}
+
+.contacto-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.contacto-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contacto-info h2 {
+    text-align: left;
+    color: white;
+}
+
+.info-detalles {
+    margin-top: 2rem;
+}
+
+.info-item {
+    margin-bottom: 2.5rem;
+}
+
+.info-item h3 {
+    font-size: 1.3rem;
+    color: #d1d9e6;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 1.1rem;
+}
+
+.contacto .form-container {
+    flex: 1;
+    background: white;
+    padding: 3.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.form-group { margin-bottom: 1.8rem; }
+
+.form-group label {
+    display: block; 
+    margin-bottom: 0.5rem;
+    color: #181515;
+    font-weight: 600;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.submit-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1a1a2e;
+    color: rgb(243, 238, 238);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== BOTÓN WHATSAPP FLOTANTE ===== */
+.whatsapp-float {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    width: 65px !important;
+    height: 65px !important;
+    background-color: #25d366 !important;
+    color: white !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999999 !important;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3) !important;
+}
+
+.whatsapp-float img {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+/* ===== RESPONSIVO CELULARES ===== */
+@media (max-width: 900px) {
+    .contacto-layout {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .contacto-info, .contacto-info h2 {
+        text-align: center;
+    }
+}
+
+/* ===== NUEVO CAMBIO: FONDO UNIFICADO ===== */
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+    width: 100%;
+    padding: 2.5rem 2rem; 
+    scroll-margin-top: 100px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem; 
+    color: #0b0e14;
+    text-align: center;
+}
+
+/* ===== SERVICIOS (Información y Servicios) ===== */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    gap: 2.5rem;         /* LÍNEA 152: Espacio entre cuadros */
+    margin-top: 3rem;    /* LÍNEA 153: Distancia respecto al título h2 */
+    justify-content: center;
+    max-width: 1200px;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servicio-card {
+    background: rgb(160, 160, 172); 
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+/* ===== VENTAJAS (POR QUÉ ELEGIRNOS) CON EFECTO DE SERVICIOS ===== */
+.ventajas {
+    background: transparent; 
+}
+
+.ventajas-list {
+    display: grid;
+    /* Ajustado para que sean anchos y se repartan bien en el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+    /* Espacio amplio entre cuadros */
+    gap: 4rem; 
+    
+    max-width: 1500px; /* Alineado con el resto de la página */
+    margin-top: 3rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.ventaja-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    /* Color gris similar a servicios pero con transparencia para el fondo de balanza */
+    background: rgba(160, 160, 172, 0.9); 
+    padding: 2rem; 
+    border-radius: 12px;
+    
+    /* EFECTO DE SERVICIOS: Sombra y Transición */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* EFECTO DE SERVICIOS: Elevación al pasar el mouse (Hover) */
+.ventaja-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.ventaja-icon {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    background-color: #34538A; /* Color a juego con el header */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.ventaja-item h3 {
+    color: #16171d;
+    margin-bottom: 0.5rem;
+}
+/* ===== FONDO UNIFICADO (BALANZA) ===== */
+.contenedor-fondo-mixto {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('img/descarga.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    padding-bottom: 3rem; /* Espacio extra al final */
+}
+
+.contenedor-fondo-mixto .servicio-card {
+    background: rgba(160, 160, 172, 0.95); 
+    backdrop-filter: blur(5px);
+}
