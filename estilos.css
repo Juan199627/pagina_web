@@ -364,16 +364,6 @@ footer {
     height: 35px !important;
 }
 
-/* ===== RESPONSIVO CELULARES ===== */
-@media (max-width: 900px) {
-    .contacto-layout {
-        flex-direction: column;
-        gap: 3rem;
-    }
-    .contacto-info, .contacto-info h2 {
-        text-align: center;
-    }
-}
 
 /* ===== NUEVO CAMBIO: FONDO UNIFICADO ===== */
 
@@ -482,4 +472,91 @@ h2 {
 .contenedor-fondo-mixto .servicio-card {
     background: rgba(160, 160, 172, 0.95); 
     backdrop-filter: blur(5px);
+
+}
+/* ==========================================================================
+   7. RESPONSIVO (Ajustes para Celulares y Tablets)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    /* Ajustes del Hero (Banner principal) */
+    .hero h1 {
+        font-size: 2.2rem; /* Título más pequeño para que no se corte */
+        padding: 0 1rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    /* Navegación móvil */
+    nav {
+        flex-direction: column; /* Logo arriba, links abajo */
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+        flex-wrap: wrap; /* Si los links son largos, bajan a la siguiente línea */
+        justify-content: center;
+    }
+
+    /* Secciones de Cuadros */
+    .servicios-grid, 
+    .ventajas-list {
+        grid-template-columns: 1fr; /* Una sola columna: un cuadro debajo de otro */
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    /* Ajuste específico para los cuadros de Ventajas */
+    .ventajas-list {
+        grid-template-columns: 1fr !important; /* Forzamos una columna en móvil */
+    }
+
+    .ventaja-item {
+        flex-direction: column; /* Icono arriba, texto abajo */
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    /* Formulario de Contacto */
+    .contacto-layout {
+        flex-direction: column; /* Info de contacto arriba, formulario abajo */
+        gap: 2.5rem;
+    }
+
+    .form-container {
+        padding: 1.5rem; /* Menos espacio interno en celulares */
+    }
+
+    .contacto-info {
+        text-align: center;
+    }
+
+    .contacto-info h2 {
+        text-align: center;
+    }
+
+    /* Botón flotante de WhatsApp más pequeño para que no estorbe */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Ajuste para pantallas muy pequeñas (iPhone SE, etc.) */
+@media (max-width: 400px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
 }
